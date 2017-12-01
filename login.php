@@ -7,7 +7,7 @@
 </head>
 <body>
 	<form action='validar.php' method="post">
-		<input type="text" placeholder="&#128272; Usuario" name="usuario"><br/><br/>
+		<input type="text" placeholder="&#128272; Correo" name="correo"><br/><br/>
 		<input type="password" placeholder="&#128272 Contraseña" name="clave"><br/><br/>
 		<input type="submit" value="Entrar">
 	</form>

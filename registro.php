@@ -14,7 +14,7 @@ $app['debug'] = true;
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver'   => 'pdo_mysql',
-         'host'      => '187.166.84.11',
+         'host'      => 'localhost',
          'dbname'    => 'mi_tienda',
          'user'      => 'mi_tienda',
          'password'  => 'tienda01',
@@ -30,12 +30,19 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+$app->register(new Silex\Provider\AssetServiceProvider());
+
 
 //Definimos una ruta de inicio
 $app->get('/', function() use($app) {
-	return $app['twig']->render('principal.twig');
-});
 
+$sql = "SELECT p.*, m.nombre marca, c.nombre categoria FROM clientes p
+  //INNER JOIN marcas m ON m.id = p.marca_id
+  //INNER JOIN categorias  c ON c.id = p.categoria_id";
+	$clientes = $app['db']->fetchAll($sql);
+		
+	return $app['twig']->render('principal.twig',array('clientes'=>$clientes));
+});
 
 //Ruta para crear cuenta
 $app->get('/crear_cuenta', function() use($app) {

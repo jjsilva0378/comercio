@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Captura de Clientes</title>
+</head>
+
+<body>
+	<h1>Formulario de Registro</h1>
+	<form action="registroclientes.php" method="get" class="form-register" onsubmit="return validar();">
+		<h2 class="form__titulo">CREA UNA CUENTA</h2>
+		<div class="contenedor-inputs">
+			<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48" required><br>
+			<input type="text" id="apellido" name="apellido" placeholder="Apellido" class="input-48" required><br>
+			<input type="text" id="correo" name="correo" placeholder="Correo" class="input-48" required><br>
+			<input type="text" id="calle" name="calle" placeholder="Calle" class="input-48" required><br>
+			<input type="text" id="colonia" name="colonia" placeholder="Colonia" class="input-48" required><br>
+			<input type="text" id="cp" name="cp" placeholder="C.P." class="input-48" required><br>
+			<input type="text" id="telefono" name="telefono" placeholder="Telefono" class="input-48" required><br>
+			<input type="submit" value="Registrar" class="btn-enviar">
+			<p class="form__linl">¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>
+		</div>
+	</form>
+</body>
+</html>

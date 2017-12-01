@@ -17,6 +17,18 @@
       <td width="206" align="center"><strong>DESCRIPCION</strong></td>
       <td width="206" align="center"><strong>PRECIO</strong></td>
       <td width="206" align="center"><strong>CATEGORIA</strong></td>
+    
+  <form action="ejemplo.php">
+  <p>Producto: <input type="text" name="producto" /></p>
+  <p>Descripción: <input type="text" name="descripcion" /></p>
+  <p>Precio: <input type="text" name="precio" /></p>
+  <p>Categoria: <input type="text" name="categoria" /></p>
+
+  <p><input type="submit" value="Agregar" /></p>
+ 
+</form>
+    
+    
     </tr>
     <tr>
       <td><img src="images/ajo 300.jpg" width="300" height="300" alt=""/></td>
